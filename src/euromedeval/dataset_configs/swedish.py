@@ -1,0 +1,78 @@
+"""Swedish dataset configs."""
+
+from __future__ import annotations
+
+from ..schemas import AccessMode, DatasetConfig, DatasetStatus, DatasetTier
+from ..tasks import CLINICAL_CASE_MCQ, EVIDENCE_QA, MEDICAL_KNOWLEDGE_MCQ
+
+
+SWEDISH_DATASET_CONFIGS = [
+    DatasetConfig(
+        name="smdt-sv",
+        pretty_name="Swedish Medical Doctors Test",
+        language="sv",
+        country="SE",
+        task=MEDICAL_KNOWLEDGE_MCQ.name,
+        tier=DatasetTier.GOLD,
+        status=DatasetStatus.OFFICIAL,
+        source_url="https://github.com/BirgerMoell/swedish-medical-benchmark",
+        source_type="medical licensing-style exam",
+        license="TBD per source",
+        access_mode=AccessMode.SCRIPT_ONLY,
+        native=True,
+        clinically_reviewed=False,
+        creation_script="src/scripts/create_smdt_sv.py",
+        description="Swedish-native medical exam benchmark derived from licensing-style questions.",
+    ),
+    DatasetConfig(
+        name="se-em-sv",
+        pretty_name="Swedish Emergency Medicine Cases",
+        language="sv",
+        country="SE",
+        task=CLINICAL_CASE_MCQ.name,
+        tier=DatasetTier.GOLD,
+        status=DatasetStatus.UNOFFICIAL,
+        source_url="https://github.com/BirgerMoell/swedish-medical-benchmark",
+        source_type="specialist emergency medicine questions",
+        license="TBD per source",
+        access_mode=AccessMode.SCRIPT_ONLY,
+        native=True,
+        clinically_reviewed=False,
+        creation_script="src/scripts/create_se_em_sv.py",
+        description="Swedish emergency medicine question set for safety-critical reasoning.",
+    ),
+    DatasetConfig(
+        name="se-gp-sv",
+        pretty_name="Swedish General Practice Cases",
+        language="sv",
+        country="SE",
+        task=CLINICAL_CASE_MCQ.name,
+        tier=DatasetTier.SILVER,
+        status=DatasetStatus.UNOFFICIAL,
+        source_url="https://github.com/BirgerMoell/swedish-medical-benchmark",
+        source_type="general practice case questions",
+        license="TBD per source",
+        access_mode=AccessMode.SCRIPT_ONLY,
+        native=True,
+        clinically_reviewed=False,
+        creation_script="src/scripts/create_se_gp_sv.py",
+        description="Swedish primary-care case questions migrated from the original benchmark repo.",
+    ),
+    DatasetConfig(
+        name="pubmedqa-sv",
+        pretty_name="PubMedQA Swedish",
+        language="sv",
+        country="SE",
+        task=EVIDENCE_QA.name,
+        tier=DatasetTier.BRONZE,
+        status=DatasetStatus.UNOFFICIAL,
+        source_url="https://github.com/BirgerMoell/swedish-medical-benchmark",
+        source_type="translated medical literature QA",
+        license="See upstream dataset license",
+        access_mode=AccessMode.OPEN,
+        native=False,
+        clinically_reviewed=False,
+        creation_script="src/scripts/create_pubmedqa_sv.py",
+        description="Translated anchor dataset for evidence-style medical QA in Swedish.",
+    ),
+]

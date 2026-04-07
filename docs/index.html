@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EuroMedEval</title>
+    <meta
+      name="description"
+      content="A native-first benchmark for evaluating medical language models across European languages."
+    />
+    <meta name="theme-color" content="#0d1b1f" />
+    <meta property="og:title" content="EuroMedEval" />
+    <meta
+      property="og:description"
+      content="A native-first benchmark framework for evaluating medical language models across European languages."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">EME</span>
+          <div>
+            <p class="eyebrow">EuroMedEval</p>
+            <p class="microcopy">Native-first medical benchmark infrastructure for Europe</p>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="#why">Why</a>
+          <a href="#seed-set">Seed Set</a>
+          <a href="#contributors">Contribute</a>
+          <a href="#paper">Paper</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-orbit hero-orbit-a"></div>
+          <div class="hero-orbit hero-orbit-b"></div>
+          <div class="hero-grid">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">Open Benchmark Framework</p>
+              <h1>Medical evaluation for Europe should start with Europe’s real exams.</h1>
+              <p class="hero-text">
+                EuroMedEval is an open benchmark framework for medical language models across European
+                languages, built around native licensing-style exams, specialist questions, and clinically
+                grounded case sets instead of relying mainly on translation.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#seed-set">Explore the seed datasets</a>
+                <a class="button button-secondary" href="#contributors">See the contributor workflow</a>
+              </div>
+            </div>
+
+            <div class="hero-panel reveal">
+              <div class="panel-head">
+                <p class="panel-label">Flagship principles</p>
+                <p class="panel-value">native-first, open, reproducible</p>
+              </div>
+              <div class="signal-columns">
+                <article>
+                  <span>01</span>
+                  <h2>Real sources</h2>
+                  <p>Medical licensing exams, specialist cases, and reconstructable public educational datasets.</p>
+                </article>
+                <article>
+                  <span>02</span>
+                  <h2>Transparent scoring</h2>
+                  <p>MCQ accuracy, QA exact match, token F1, and confidence intervals with public scripts.</p>
+                </article>
+                <article>
+                  <span>03</span>
+                  <h2>Community growth</h2>
+                  <p>Language-by-language expansion through documented provenance and contributor-friendly ingestion templates.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-band reveal">
+          <div>
+            <p class="stat-value">6</p>
+            <p class="stat-label">seed countries in the scaffold</p>
+          </div>
+          <div>
+            <p class="stat-value">2</p>
+            <p class="stat-label">core scoring modes: MCQ and QA</p>
+          </div>
+          <div>
+            <p class="stat-value">1</p>
+            <p class="stat-label">public goal: a native-only flagship score</p>
+          </div>
+        </section>
+
+        <section class="signal-band reveal" aria-label="Project signal">
+          <div class="signal-chip">
+            <span class="signal-chip-label">Positioning</span>
+            <strong>EuroEval for medicine</strong>
+          </div>
+          <div class="signal-chip">
+            <span class="signal-chip-label">Core bet</span>
+            <strong>Native benchmarks beat translated prestige</strong>
+          </div>
+          <div class="signal-chip">
+            <span class="signal-chip-label">Public artifact</span>
+            <strong>Open-source benchmark plus GitHub Pages front door</strong>
+          </div>
+        </section>
+
+        <section class="section manifesto" id="why">
+          <div class="section-head reveal">
+            <p class="eyebrow">Why this matters</p>
+            <h2>Translated benchmarks are not enough for clinical language.</h2>
+          </div>
+          <div class="manifesto-grid">
+            <article class="manifesto-card reveal">
+              <h3>Terminology is local</h3>
+              <p>
+                Clinical phrasing, abbreviations, exam conventions, and answer expectations shift by country and by
+                specialty. A model that looks strong in English or translated QA can still fail in native practice.
+              </p>
+            </article>
+            <article class="manifesto-card reveal">
+              <h3>Evaluation should mirror use</h3>
+              <p>
+                The benchmark centers real medical training material first, then uses translated anchors only for
+                calibration and comparison, not for the headline leaderboard.
+              </p>
+            </article>
+            <article class="manifesto-card reveal">
+              <h3>Open infrastructure matters</h3>
+              <p>
+                Every dataset should come with provenance, a reconstruction path, and a stable scoring interface so
+                new languages can be added without rewriting the project each time.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section seed-set" id="seed-set">
+          <div class="section-head reveal">
+            <p class="eyebrow">European seed set</p>
+            <h2>Founding datasets already span multiple countries and record formats.</h2>
+          </div>
+          <div class="country-rail">
+            <article class="country-block reveal">
+              <p class="country-code">SE</p>
+              <h3>Sweden</h3>
+              <ul>
+                <li><code>smdt-sv</code></li>
+                <li><code>se-em-sv</code></li>
+                <li><code>se-gp-sv</code></li>
+                <li><code>pubmedqa-sv</code></li>
+              </ul>
+            </article>
+            <article class="country-block reveal">
+              <p class="country-code">NO</p>
+              <h3>Norway</h3>
+              <ul>
+                <li><code>normedqa-no</code></li>
+              </ul>
+            </article>
+            <article class="country-block reveal">
+              <p class="country-code">ES</p>
+              <h3>Spain</h3>
+              <ul>
+                <li><code>head-qa-es</code></li>
+                <li><code>casimedicos-es</code></li>
+              </ul>
+            </article>
+            <article class="country-block reveal">
+              <p class="country-code">FR</p>
+              <h3>France</h3>
+              <ul>
+                <li><code>frenchmedmcqa-fr</code></li>
+              </ul>
+            </article>
+            <article class="country-block reveal">
+              <p class="country-code">IT</p>
+              <h3>Italy</h3>
+              <ul>
+                <li><code>medschool-test-it</code></li>
+              </ul>
+            </article>
+            <article class="country-block reveal">
+              <p class="country-code">PL</p>
+              <h3>Poland</h3>
+              <ul>
+                <li><code>lek-pl</code> placeholder</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section framework">
+          <div class="section-head reveal">
+            <p class="eyebrow">Framework design</p>
+            <h2>One benchmark spine, multiple evidence shapes.</h2>
+          </div>
+          <div class="framework-grid">
+            <article class="framework-panel reveal">
+              <h3>Record formats</h3>
+              <p>
+                The project now handles both multiple-choice records and QA-style records, so native clinical datasets
+                do not have to be distorted to fit the same schema.
+              </p>
+            </article>
+            <article class="framework-panel reveal">
+              <h3>Build pipeline</h3>
+              <p>
+                Dataset creation scripts can be run through a shared CLI, making local reconstruction and future
+                GitHub Actions benchmarking straightforward.
+              </p>
+            </article>
+            <article class="framework-panel reveal">
+              <h3>Scoring logic</h3>
+              <p>
+                MCQ datasets use accuracy. QA datasets use exact match with token-level F1. Native-only task weighting
+                remains the main public aggregation.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contributors" id="contributors">
+          <div class="section-head reveal">
+            <p class="eyebrow">Contributor workflow</p>
+            <h2>Adding a new country should feel procedural, not heroic.</h2>
+          </div>
+          <div class="steps">
+            <article class="step reveal">
+              <span>1</span>
+              <h3>Find a real local source</h3>
+              <p>Prefer official exams, public archives, or clinically reviewed educational sets with stable answer keys.</p>
+            </article>
+            <article class="step reveal">
+              <span>2</span>
+              <h3>Choose the right record format</h3>
+              <p>Use MCQ for answer-option data, or QA formats for span or generative answers when that is the true source shape.</p>
+            </article>
+            <article class="step reveal">
+              <span>3</span>
+              <h3>Ship provenance with code</h3>
+              <p>Every dataset should come with a reconstruction script, access mode, license note, and documentation page.</p>
+            </article>
+            <article class="step reveal">
+              <span>4</span>
+              <h3>Keep leaderboards honest</h3>
+              <p>Native exam datasets should drive the flagship score. Translated or differently formatted datasets can still be reported clearly.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section paper" id="paper">
+          <div class="section-head reveal">
+            <p class="eyebrow">Paper strategy</p>
+            <h2>There are two publishable stories here, and they fit different venues.</h2>
+          </div>
+          <div class="submission-status reveal">
+            <p class="submission-kicker">Best immediate move on April 7, 2026</p>
+            <p class="submission-title">Write the benchmark/resource paper for EMNLP 2026 and keep the clinically deeper version for a medical AI venue or journal.</p>
+            <p class="submission-copy">
+              AIME is probably the cleanest thematic fit, but its required abstract deadline passed on
+              February 17, 2026, even though the full-paper deadline is listed as April 19, 2026. EMNLP 2026 is
+              still realistically open through the ARR route, with the current submission deadline listed as
+              May 25, 2026.
+            </p>
+          </div>
+          <div class="paper-grid">
+            <article class="paper-card reveal">
+              <p class="paper-tag">Best benchmark-first route</p>
+              <h3>AIME</h3>
+              <p>
+                Strong fit if the paper emphasizes clinical benchmarking, evaluation design, and European medical
+                relevance. Best treated as the venue family to target next unless an abstract was already submitted
+                for AIME 2026.
+              </p>
+            </article>
+            <article class="paper-card reveal">
+              <p class="paper-tag">Best NLP benchmark route</p>
+              <h3>ACL / EMNLP</h3>
+              <p>
+                Strong fit if the paper foregrounds multilingual resource creation, language diversity, and evaluation.
+                EMNLP 2026 lists an ARR submission deadline of May 25, 2026.
+              </p>
+            </article>
+            <article class="paper-card reveal">
+              <p class="paper-tag">Best journal route</p>
+              <h3>Artificial Intelligence in Medicine</h3>
+              <p>
+                Strong fit if the paper is mature, benchmark-heavy, and clinically grounded. The journal explicitly
+                covers interdisciplinary AI work in medicine and healthcare.
+              </p>
+            </article>
+            <article class="paper-card reveal">
+              <p class="paper-tag">Best broader impact route</p>
+              <h3>npj Digital Medicine</h3>
+              <p>
+                A good target if the benchmark is positioned as digital-health infrastructure with clinical utility,
+                governance relevance, and strong validation beyond a pure NLP resource paper.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section closing reveal">
+          <p class="eyebrow">What this project can become</p>
+          <h2>A EuroEval-style benchmark for medicine, built from Europe’s own training and clinical language.</h2>
+          <p>
+            The point is not to create one more translated leaderboard. The point is to build the open benchmark
+            infrastructure that every European medical language still lacks.
+          </p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>EuroMedEval is designed as an open-source benchmark framework with a public GitHub Pages front door.</p>
+      </footer>
+    </div>
+    <script src="./site.js"></script>
+  </body>
+</html>

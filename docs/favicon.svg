@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="EuroMedEval mark">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#e55c3d" />
+      <stop offset="100%" stop-color="#f39a53" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#0d1b1f" />
+  <circle cx="64" cy="64" r="42" fill="none" stroke="url(#g)" stroke-width="8" />
+  <path
+    d="M42 44h34v10H54v12h20v10H54v12h22v10H42z"
+    fill="#f4efe6"
+  />
+</svg>
