@@ -1,5 +1,7 @@
 const seedDatasets = [
   { name: "entrance-al-sq", country: "AL", pretty: "Albania", native: true, format: "mcq", tier: "silver" },
+  { name: "entrance-al-systems-sq", country: "AL", pretty: "Albania", native: true, format: "mcq", tier: "silver" },
+  { name: "entrance-al-chemistry-sq", country: "AL", pretty: "Albania", native: true, format: "mcq", tier: "silver" },
   { name: "entrance-be-nl", country: "BE", pretty: "Belgium", native: true, format: "mcq", tier: "silver" },
   { name: "doatap-med-el", country: "GR", pretty: "Greece", native: true, format: "mcq", tier: "gold" },
   { name: "smdt-sv", country: "SE", pretty: "Sweden", native: true, format: "mcq", tier: "gold" },
@@ -14,6 +16,8 @@ const seedDatasets = [
   { name: "mediqal-oeq-fr", country: "FR", pretty: "France", native: true, format: "qa", tier: "gold" },
   { name: "medexpqa-fr", country: "FR", pretty: "France", native: false, format: "mcq", tier: "bronze" },
   { name: "medschool-test-it", country: "IT", pretty: "Italy", native: true, format: "mcq", tier: "gold" },
+  { name: "miur-clinica-it", country: "IT", pretty: "Italy", native: true, format: "mcq", tier: "gold" },
+  { name: "miur-preclinica-it", country: "IT", pretty: "Italy", native: true, format: "mcq", tier: "gold" },
   { name: "medexpqa-it", country: "IT", pretty: "Italy", native: false, format: "mcq", tier: "bronze" },
   { name: "lek-pl", country: "PL", pretty: "Poland", native: true, format: "mcq", tier: "gold" },
   { name: "ldek-pl", country: "PL", pretty: "Poland", native: true, format: "mcq", tier: "gold" },

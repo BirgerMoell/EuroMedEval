@@ -4,14 +4,14 @@ This page tracks the first real datasets that can anchor EuroMedEval across coun
 
 ## Included now
 
-- Albania: `entrance-al-sq` from [Albanian medical entrance exams](https://huggingface.co/datasets/marjpri/albanian-medical-exams-cycles-mcq-190)
+- Albania: `entrance-al-sq`, `entrance-al-systems-sq`, `entrance-al-chemistry-sq` from [Albanian medical entrance exam pools](https://huggingface.co/datasets/marjpri/albanian-medical-exams-cycles-mcq-190)
 - Belgium: `entrance-be-nl` from [Belgian physician entrance exam](https://huggingface.co/datasets/jjzha/belgian-entrance-exam-physician)
 - Sweden: `smdt-sv`, `se-em-sv`, `se-gp-sv`, `pubmedqa-sv` from [Swedish Medical Benchmark](https://github.com/BirgerMoell/swedish-medical-benchmark)
 - Greece: `doatap-med-el` from [Greek Medical MCQA](https://huggingface.co/datasets/ilsp/medical_mcqa_greek)
 - Norway: `normedqa-no` from [NorMedQA](https://huggingface.co/datasets/SimulaMet/NorMedQA)
 - Spain: `head-qa-es` from [HEAD-QA](https://huggingface.co/datasets/dvilares/head_qa)
 - France: `frenchmedmcqa-fr`, `mediqal-fr`, `mediqal-oeq-fr`, `medexpqa-fr` from [FrenchMedMCQA](https://huggingface.co/datasets/qanastek/frenchmedmcqa), [MediQAl](https://huggingface.co/datasets/ANR-MALADES/MediQAl), and [MedExpQA](https://huggingface.co/datasets/HiTZ/MedExpQA)
-- Italy: `medschool-test-it`, `medexpqa-it` from [Test Medicina](https://huggingface.co/datasets/room-b007/test-medicina) and [MedExpQA](https://huggingface.co/datasets/HiTZ/MedExpQA)
+- Italy: `medschool-test-it`, `miur-clinica-it`, `miur-preclinica-it`, `medexpqa-it` from [Test Medicina](https://huggingface.co/datasets/room-b007/test-medicina), [MIUR clinica](https://huggingface.co/datasets/Detsutut/miur-medicina-clinica), [MIUR preclinica](https://huggingface.co/datasets/Detsutut/miur-medicina-preclinica), and [MedExpQA](https://huggingface.co/datasets/HiTZ/MedExpQA)
 - Poland: `lek-pl`, `ldek-pl`, `pes-pl` from the [Polish medical exams collection](https://huggingface.co/collections/amu-cai/polish-english-medical-datasets-68e63489911f969816e76b05)
 
 ## Candidate but not fully integrated yet
@@ -26,6 +26,7 @@ This page tracks the first real datasets that can anchor EuroMedEval across coun
 - France and Italy: `medexpqa-fr` and `medexpqa-it` are multilingual anchor datasets derived from parallel source material and should not affect native-only flagship scores
 - Belgium: `entrance-be-nl` is an entrance exam and should not be mixed with physician qualification scores
 - Albania: `entrance-al-sq` is an entrance exam and should not be mixed with physician qualification scores
+- Italy: `miur-clinica-it` and `miur-preclinica-it` are permissioned native datasets because the Hugging Face copies require accepted access terms
 - Poland: `pes-pl` should support specialty-aware reporting instead of a single undifferentiated pooled leaderboard
 - Poland: `ldek-pl` is dentistry-specific and should not be merged blindly into physician-only aggregate scores
 

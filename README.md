@@ -95,6 +95,8 @@ Entrance-exam datasets are still valuable, but they should live in their own ben
 
 Multilingual parallel resources are useful as comparison anchors, but they should stay in bronze support tracks rather than define the native-first flagship score.
 
+Some high-value native datasets may still be permissioned rather than fully open if the reconstruction path is public but access requires agreeing to usage terms.
+
 ## Initial roadmap
 
 1. Make Swedish the reference language with migrated SMLB-style datasets.
