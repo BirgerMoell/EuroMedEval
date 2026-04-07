@@ -37,9 +37,9 @@
         </div>
         <nav class="topnav">
           <a href="#why">Why</a>
+          <a href="#evidence">Evidence</a>
           <a href="#seed-set">Seed Set</a>
           <a href="#contributors">Contribute</a>
-          <a href="#paper">Paper</a>
         </nav>
       </header>
 
@@ -90,16 +90,16 @@
 
         <section class="stats-band reveal">
           <div>
-            <p class="stat-value">6</p>
+            <p class="stat-value">7</p>
             <p class="stat-label">seed countries in the scaffold</p>
+          </div>
+          <div>
+            <p class="stat-value">13</p>
+            <p class="stat-label">active datasets in the current seed registry</p>
           </div>
           <div>
             <p class="stat-value">2</p>
             <p class="stat-label">core scoring modes: MCQ and QA</p>
-          </div>
-          <div>
-            <p class="stat-value">1</p>
-            <p class="stat-label">public goal: a native-only flagship score</p>
           </div>
         </section>
 
@@ -148,12 +148,52 @@
           </div>
         </section>
 
+        <section class="section evidence" id="evidence">
+          <div class="section-head reveal">
+            <p class="eyebrow">Benchmark evidence</p>
+            <h2>A benchmark front page should show its footprint, not just describe it.</h2>
+          </div>
+          <div class="viz-grid">
+            <article class="viz-panel reveal">
+              <div class="viz-head">
+                <p class="panel-label">Country coverage</p>
+                <p class="panel-value">Native datasets by language-country track</p>
+              </div>
+              <div id="country-bars" class="country-bars"></div>
+            </article>
+            <article class="viz-panel reveal">
+              <div class="viz-head">
+                <p class="panel-label">Benchmark mix</p>
+                <p class="panel-value">Registry composition at a glance</p>
+              </div>
+              <div class="ring-grid">
+                <div class="ring-card">
+                  <div id="native-ring" class="ring-chart"></div>
+                  <p class="ring-label">native vs translated</p>
+                </div>
+                <div class="ring-card">
+                  <div id="format-ring" class="ring-chart"></div>
+                  <p class="ring-label">record formats</p>
+                </div>
+              </div>
+              <div id="mix-legend" class="mix-legend"></div>
+            </article>
+          </div>
+        </section>
+
         <section class="section seed-set" id="seed-set">
           <div class="section-head reveal">
             <p class="eyebrow">European seed set</p>
             <h2>Founding datasets already span multiple countries and record formats.</h2>
           </div>
           <div class="country-rail">
+            <article class="country-block reveal">
+              <p class="country-code">GR</p>
+              <h3>Greece</h3>
+              <ul>
+                <li><code>doatap-med-el</code></li>
+              </ul>
+            </article>
             <article class="country-block reveal">
               <p class="country-code">SE</p>
               <h3>Sweden</h3>
@@ -197,7 +237,9 @@
               <p class="country-code">PL</p>
               <h3>Poland</h3>
               <ul>
-                <li><code>lek-pl</code> placeholder</li>
+                <li><code>lek-pl</code></li>
+                <li><code>ldek-pl</code></li>
+                <li><code>pes-pl</code></li>
               </ul>
             </article>
           </div>
@@ -258,58 +300,6 @@
               <span>4</span>
               <h3>Keep leaderboards honest</h3>
               <p>Native exam datasets should drive the flagship score. Translated or differently formatted datasets can still be reported clearly.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section paper" id="paper">
-          <div class="section-head reveal">
-            <p class="eyebrow">Paper strategy</p>
-            <h2>There are two publishable stories here, and they fit different venues.</h2>
-          </div>
-          <div class="submission-status reveal">
-            <p class="submission-kicker">Best immediate move on April 7, 2026</p>
-            <p class="submission-title">Write the benchmark/resource paper for EMNLP 2026 and keep the clinically deeper version for a medical AI venue or journal.</p>
-            <p class="submission-copy">
-              AIME is probably the cleanest thematic fit, but its required abstract deadline passed on
-              February 17, 2026, even though the full-paper deadline is listed as April 19, 2026. EMNLP 2026 is
-              still realistically open through the ARR route, with the current submission deadline listed as
-              May 25, 2026.
-            </p>
-          </div>
-          <div class="paper-grid">
-            <article class="paper-card reveal">
-              <p class="paper-tag">Best benchmark-first route</p>
-              <h3>AIME</h3>
-              <p>
-                Strong fit if the paper emphasizes clinical benchmarking, evaluation design, and European medical
-                relevance. Best treated as the venue family to target next unless an abstract was already submitted
-                for AIME 2026.
-              </p>
-            </article>
-            <article class="paper-card reveal">
-              <p class="paper-tag">Best NLP benchmark route</p>
-              <h3>ACL / EMNLP</h3>
-              <p>
-                Strong fit if the paper foregrounds multilingual resource creation, language diversity, and evaluation.
-                EMNLP 2026 lists an ARR submission deadline of May 25, 2026.
-              </p>
-            </article>
-            <article class="paper-card reveal">
-              <p class="paper-tag">Best journal route</p>
-              <h3>Artificial Intelligence in Medicine</h3>
-              <p>
-                Strong fit if the paper is mature, benchmark-heavy, and clinically grounded. The journal explicitly
-                covers interdisciplinary AI work in medicine and healthcare.
-              </p>
-            </article>
-            <article class="paper-card reveal">
-              <p class="paper-tag">Best broader impact route</p>
-              <h3>npj Digital Medicine</h3>
-              <p>
-                A good target if the benchmark is positioned as digital-health infrastructure with clinical utility,
-                governance relevance, and strong validation beyond a pure NLP resource paper.
-              </p>
             </article>
           </div>
         </section>

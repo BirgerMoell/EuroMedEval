@@ -1,4 +1,4 @@
-"""Build a normalized JSONL file from the Polish LEK exam dataset."""
+"""Build a normalized JSONL file from the Polish LDEK exam dataset."""
 
 from __future__ import annotations
 
@@ -9,15 +9,15 @@ from euromedeval.source_parsers import label_from_answer_letter, parse_inline_le
 from euromedeval.tasks import MEDICAL_KNOWLEDGE_MCQ
 
 
-DATASET_ID = "amu-cai/medical-exams-LEK-PL-2008-2024"
-DATASET_NAME = "lek-pl"
-OUTPUT_PATH = Path("data/processed/lek_pl.jsonl")
-DEMO_OUTPUT_PATH = Path("data/processed/lek_pl_demo.jsonl")
-PRETTY_SOURCE = "medical final examination"
+DATASET_ID = "amu-cai/medical-exams-LDEK-PL-2008-2024"
+DATASET_NAME = "ldek-pl"
+OUTPUT_PATH = Path("data/processed/ldek_pl.jsonl")
+DEMO_OUTPUT_PATH = Path("data/processed/ldek_pl_demo.jsonl")
+PRETTY_SOURCE = "dental final examination"
 
 
 def main() -> None:
-    """Extract LEK questions into the EuroMedEval schema."""
+    """Extract LDEK questions into the EuroMedEval schema."""
     records: list[DatasetRecord] = []
 
     try:
@@ -25,7 +25,7 @@ def main() -> None:
     except ImportError:
         records.append(
             DatasetRecord(
-                id="lek-pl-demo-1",
+                id="ldek-pl-demo-1",
                 language="pl",
                 country="PL",
                 dataset_name=DATASET_NAME,
@@ -34,15 +34,17 @@ def main() -> None:
                 source_url=f"https://huggingface.co/datasets/{DATASET_ID}",
                 license="See upstream source and CEM terms",
                 split="demo",
-                question="Który z poniższych objawów najbardziej sugeruje zapalenie opon mózgowo-rdzeniowych?",
+                question="Wskaż prawidłowe stwierdzenie dotyczące torbieli gałeczkowo-szczękowej.",
                 options=(
-                    "A. Sztywność karku",
-                    "B. Katar",
-                    "C. Ból pięty",
-                    "D. Świąd skóry",
+                    "A. Jest niezębopochodna",
+                    "B. Jest zębopochodna",
+                    "C. Częściej umiejscawia się od strony podniebienia",
+                    "D. Może powodować bóle na skutek ucisku nerwu nosowo-podniebiennego",
+                    "E. Cień w RTG odpowiadający torbieli nie łączy się z ozębną",
                 ),
-                label="A. Sztywność karku",
-                exam_name="LEK",
+                label="D. Może powodować bóle na skutek ucisku nerwu nosowo-podniebiennego",
+                exam_name="LDEK",
+                specialty="dentistry",
                 native_or_translated="native",
             )
         )
@@ -62,12 +64,11 @@ def main() -> None:
             continue
 
         year = row.get("year")
-        exam_name = str(row.get("edition", "")).strip() or "LEK"
-        specialty = str(row.get("specialty", "")).strip() or None
+        exam_name = str(row.get("edition", "")).strip() or "LDEK"
 
         records.append(
             DatasetRecord(
-                id=f"lek-pl-{row.get('edition', 'unk')}-{row.get('question_id', len(records))}",
+                id=f"ldek-pl-{row.get('edition', 'unk')}-{row.get('question_id', len(records))}",
                 language="pl",
                 country="PL",
                 dataset_name=DATASET_NAME,
@@ -80,7 +81,7 @@ def main() -> None:
                 options=options,
                 label=label,
                 year=int(year) if year is not None else None,
-                specialty=specialty,
+                specialty="dentistry",
                 exam_name=exam_name,
                 native_or_translated="native",
             )

@@ -37,7 +37,7 @@ EuroMedEval is designed to measure model performance in the medical contexts tha
 - a normalized dataset schema
 - a lightweight dataset registry
 - a minimal benchmarker with bootstrap confidence intervals
-- seed dataset configs for Sweden, Norway, Spain, France, Italy, and Poland
+- seed dataset configs for Sweden, Greece, Norway, Spain, France, Italy, and Poland
 - starter scripts for dataset ingestion
 - contribution and dataset guides
 - a build CLI for reconstructing datasets from local sources or Hugging Face
@@ -101,11 +101,12 @@ Only native datasets should drive the main public language score.
 The scaffold now includes concrete seed entries for:
 
 - Sweden
+- Greece
 - Norway
 - Spain
 - France
 - Italy
-- Poland as a placeholder candidate awaiting a cleaner source pipeline
+- Poland with LEK, LDEK, and PES exam tracks
 
 ## Commands
 
@@ -154,6 +155,7 @@ Start here:
 - [New Dataset Guide](/Users/birger/Documents/Papers/EuroMedEval/NEW_DATASET_GUIDE.md)
 - [Methodology](/Users/birger/Documents/Papers/EuroMedEval/docs/methodology.md)
 - [European Seed Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/european_seed_set.md)
+- [Greek Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/greek.md)
 
 ## License
 

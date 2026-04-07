@@ -1,4 +1,4 @@
-"""Build a normalized JSONL file from the Polish LEK exam dataset."""
+"""Build a normalized JSONL file from the Polish PES specialist exam dataset."""
 
 from __future__ import annotations
 
@@ -9,15 +9,15 @@ from euromedeval.source_parsers import label_from_answer_letter, parse_inline_le
 from euromedeval.tasks import MEDICAL_KNOWLEDGE_MCQ
 
 
-DATASET_ID = "amu-cai/medical-exams-LEK-PL-2008-2024"
-DATASET_NAME = "lek-pl"
-OUTPUT_PATH = Path("data/processed/lek_pl.jsonl")
-DEMO_OUTPUT_PATH = Path("data/processed/lek_pl_demo.jsonl")
-PRETTY_SOURCE = "medical final examination"
+DATASET_ID = "amu-cai/medical-exams-PES-PL-2007-2024"
+DATASET_NAME = "pes-pl"
+OUTPUT_PATH = Path("data/processed/pes_pl.jsonl")
+DEMO_OUTPUT_PATH = Path("data/processed/pes_pl_demo.jsonl")
+PRETTY_SOURCE = "specialist board certification exam"
 
 
 def main() -> None:
-    """Extract LEK questions into the EuroMedEval schema."""
+    """Extract PES questions into the EuroMedEval schema."""
     records: list[DatasetRecord] = []
 
     try:
@@ -25,7 +25,7 @@ def main() -> None:
     except ImportError:
         records.append(
             DatasetRecord(
-                id="lek-pl-demo-1",
+                id="pes-pl-demo-1",
                 language="pl",
                 country="PL",
                 dataset_name=DATASET_NAME,
@@ -34,15 +34,17 @@ def main() -> None:
                 source_url=f"https://huggingface.co/datasets/{DATASET_ID}",
                 license="See upstream source and CEM terms",
                 split="demo",
-                question="Który z poniższych objawów najbardziej sugeruje zapalenie opon mózgowo-rdzeniowych?",
+                question="Wskaż zdanie fałszywe dotyczące sedacji i znieczulenia ogólnego do leczenia stomatologicznego.",
                 options=(
-                    "A. Sztywność karku",
-                    "B. Katar",
-                    "C. Ból pięty",
-                    "D. Świąd skóry",
+                    "A. Sedacja wziewna do 50% podtlenku azotu może być wykonana przez stomatologa z pomocą asystenta",
+                    "B. Osoby ASA I i ASA II można bezpiecznie poddać płytkiej sedacji ambulatoryjnej",
+                    "C. Stosowanie sedacji dożylnej wymaga obecności anestezjologa",
+                    "D. Sedacja z użyciem N2O nie wymaga dodatkowego działania przeciwbólowego",
+                    "E. Najdogodniejsza jest intubacja drogą nosowo-tchawiczą",
                 ),
-                label="A. Sztywność karku",
-                exam_name="LEK",
+                label="D. Sedacja z użyciem N2O nie wymaga dodatkowego działania przeciwbólowego",
+                exam_name="PES 2018 wiosna",
+                specialty="stomatologia dziecięca",
                 native_or_translated="native",
             )
         )
@@ -62,12 +64,12 @@ def main() -> None:
             continue
 
         year = row.get("year")
-        exam_name = str(row.get("edition", "")).strip() or "LEK"
         specialty = str(row.get("specialty", "")).strip() or None
+        edition = str(row.get("edition", "")).strip() or "PES"
 
         records.append(
             DatasetRecord(
-                id=f"lek-pl-{row.get('edition', 'unk')}-{row.get('question_id', len(records))}",
+                id=f"pes-pl-{edition}-{row.get('question_id', len(records))}",
                 language="pl",
                 country="PL",
                 dataset_name=DATASET_NAME,
@@ -81,7 +83,7 @@ def main() -> None:
                 label=label,
                 year=int(year) if year is not None else None,
                 specialty=specialty,
-                exam_name=exam_name,
+                exam_name=edition,
                 native_or_translated="native",
             )
         )

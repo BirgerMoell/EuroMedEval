@@ -5,18 +5,22 @@ This page tracks the first real datasets that can anchor EuroMedEval across coun
 ## Included now
 
 - Sweden: `smdt-sv`, `se-em-sv`, `se-gp-sv`, `pubmedqa-sv` from [Swedish Medical Benchmark](https://github.com/BirgerMoell/swedish-medical-benchmark)
+- Greece: `doatap-med-el` from [Greek Medical MCQA](https://huggingface.co/datasets/ilsp/medical_mcqa_greek)
 - Norway: `normedqa-no` from [NorMedQA](https://huggingface.co/datasets/SimulaMet/NorMedQA)
 - Spain: `head-qa-es` from [HEAD-QA](https://huggingface.co/datasets/dvilares/head_qa)
 - France: `frenchmedmcqa-fr` from [FrenchMedMCQA](https://huggingface.co/datasets/qanastek/frenchmedmcqa)
 - Italy: `medschool-test-it` from [Test Medicina](https://huggingface.co/datasets/room-b007/test-medicina)
+- Poland: `lek-pl`, `ldek-pl`, `pes-pl` from the [Polish medical exams collection](https://huggingface.co/collections/amu-cai/polish-english-medical-datasets-68e63489911f969816e76b05)
 
 ## Candidate but not fully integrated yet
 
-- Poland: native LEK-style public source still needs a legally clear reproducible pipeline
+- Albania: official medicine-profile exam material looks promising, but should be kept separate from doctor-qualification tracks
 
 ## Special handling
 
 - Spain: `casimedicos-es` is supported as extractive QA and should be reported separately from native MCQ aggregates
+- Poland: `pes-pl` should support specialty-aware reporting instead of a single undifferentiated pooled leaderboard
+- Poland: `ldek-pl` is dentistry-specific and should not be merged blindly into physician-only aggregate scores
 
 ## Selection rule
 
