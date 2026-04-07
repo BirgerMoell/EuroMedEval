@@ -37,7 +37,7 @@ EuroMedEval is designed to measure model performance in the medical contexts tha
 - a normalized dataset schema
 - a lightweight dataset registry
 - a minimal benchmarker with bootstrap confidence intervals
-- seed dataset configs for Albania, Belgium, Sweden, Greece, Norway, Spain, France, Italy, and Poland
+- seed dataset configs for Albania, Belgium, Germany, Sweden, Greece, Norway, Spain, France, Italy, and Poland
 - starter scripts for dataset ingestion
 - contribution and dataset guides
 - a build CLI for reconstructing datasets from local sources or Hugging Face
@@ -108,6 +108,7 @@ The scaffold now includes concrete seed entries for:
 
 - Albania
 - Belgium
+- Germany
 - Sweden
 - Greece
 - Norway
@@ -165,7 +166,10 @@ Start here:
 - [European Seed Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/european_seed_set.md)
 - [Albanian Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/albanian.md)
 - [Belgian Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/belgian.md)
+- [German Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/german.md)
 - [Greek Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/greek.md)
+- [Portugal Sourcing Notes](/Users/birger/Documents/Papers/EuroMedEval/docs/sourcing/portugal.md)
+- [Romania Sourcing Notes](/Users/birger/Documents/Papers/EuroMedEval/docs/sourcing/romania.md)
 
 ## License
 

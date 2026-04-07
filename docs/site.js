@@ -3,6 +3,7 @@ const seedDatasets = [
   { name: "entrance-al-systems-sq", country: "AL", pretty: "Albania", native: true, format: "mcq", tier: "silver" },
   { name: "entrance-al-chemistry-sq", country: "AL", pretty: "Albania", native: true, format: "mcq", tier: "silver" },
   { name: "entrance-be-nl", country: "BE", pretty: "Belgium", native: true, format: "mcq", tier: "silver" },
+  { name: "impp-sample-de", country: "DE", pretty: "Germany", native: true, format: "mcq", tier: "silver" },
   { name: "doatap-med-el", country: "GR", pretty: "Greece", native: true, format: "mcq", tier: "gold" },
   { name: "smdt-sv", country: "SE", pretty: "Sweden", native: true, format: "mcq", tier: "gold" },
   { name: "se-em-sv", country: "SE", pretty: "Sweden", native: true, format: "mcq", tier: "gold" },
