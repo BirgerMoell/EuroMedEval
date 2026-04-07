@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from ..schemas import AccessMode, DatasetConfig, DatasetStatus, DatasetTier
-from ..tasks import MEDICAL_KNOWLEDGE_MCQ
+from ..tasks import CLINICAL_CASE_MCQ, MEDICAL_KNOWLEDGE_MCQ
 
 
 ITALIAN_DATASET_CONFIGS = [
@@ -31,5 +31,22 @@ ITALIAN_DATASET_CONFIGS = [
             "sections and is not strictly clinician-grade medical Q&A."
         ),
     ),
+    DatasetConfig(
+        name="medexpqa-it",
+        pretty_name="MedExpQA Italian Anchor",
+        language="it",
+        country="IT",
+        task=CLINICAL_CASE_MCQ.name,
+        tier=DatasetTier.BRONZE,
+        status=DatasetStatus.UNOFFICIAL,
+        source_url="https://huggingface.co/datasets/HiTZ/MedExpQA",
+        source_type="multilingual medical exam QA anchor benchmark",
+        license="CC BY 4.0",
+        access_mode=AccessMode.SCRIPT_ONLY,
+        native=False,
+        clinically_reviewed=False,
+        creation_script="src/scripts/create_medexpqa_it.py",
+        description="Italian MedExpQA anchor set derived from multilingual MIR-style exam material with gold explanations.",
+        notes="Parallel multilingual anchor resource; keep separate from native-first flagship aggregates.",
+    ),
 ]
-

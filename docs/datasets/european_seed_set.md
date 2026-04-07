@@ -10,8 +10,8 @@ This page tracks the first real datasets that can anchor EuroMedEval across coun
 - Greece: `doatap-med-el` from [Greek Medical MCQA](https://huggingface.co/datasets/ilsp/medical_mcqa_greek)
 - Norway: `normedqa-no` from [NorMedQA](https://huggingface.co/datasets/SimulaMet/NorMedQA)
 - Spain: `head-qa-es` from [HEAD-QA](https://huggingface.co/datasets/dvilares/head_qa)
-- France: `frenchmedmcqa-fr`, `mediqal-fr` from [FrenchMedMCQA](https://huggingface.co/datasets/qanastek/frenchmedmcqa) and [MediQAl](https://huggingface.co/datasets/ANR-MALADES/MediQAl)
-- Italy: `medschool-test-it` from [Test Medicina](https://huggingface.co/datasets/room-b007/test-medicina)
+- France: `frenchmedmcqa-fr`, `mediqal-fr`, `mediqal-oeq-fr`, `medexpqa-fr` from [FrenchMedMCQA](https://huggingface.co/datasets/qanastek/frenchmedmcqa), [MediQAl](https://huggingface.co/datasets/ANR-MALADES/MediQAl), and [MedExpQA](https://huggingface.co/datasets/HiTZ/MedExpQA)
+- Italy: `medschool-test-it`, `medexpqa-it` from [Test Medicina](https://huggingface.co/datasets/room-b007/test-medicina) and [MedExpQA](https://huggingface.co/datasets/HiTZ/MedExpQA)
 - Poland: `lek-pl`, `ldek-pl`, `pes-pl` from the [Polish medical exams collection](https://huggingface.co/collections/amu-cai/polish-english-medical-datasets-68e63489911f969816e76b05)
 
 ## Candidate but not fully integrated yet
@@ -22,6 +22,8 @@ This page tracks the first real datasets that can anchor EuroMedEval across coun
 ## Special handling
 
 - Spain: `casimedicos-es` is supported as extractive QA and should be reported separately from native MCQ aggregates
+- France: `mediqal-oeq-fr` should be reported as a separate generative QA track
+- France and Italy: `medexpqa-fr` and `medexpqa-it` are multilingual anchor datasets derived from parallel source material and should not affect native-only flagship scores
 - Belgium: `entrance-be-nl` is an entrance exam and should not be mixed with physician qualification scores
 - Albania: `entrance-al-sq` is an entrance exam and should not be mixed with physician qualification scores
 - Poland: `pes-pl` should support specialty-aware reporting instead of a single undifferentiated pooled leaderboard

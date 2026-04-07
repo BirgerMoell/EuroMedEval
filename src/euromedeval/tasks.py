@@ -32,6 +32,12 @@ CLINICAL_CASE_MCQ = TaskDefinition(
     description="Case-based questions such as diagnosis, urgency, or next best step.",
 )
 
+CLINICAL_CASE_QA = TaskDefinition(
+    name="clinical-case-qa",
+    pretty_name="Clinical Case QA",
+    description="Open-ended or short-answer responses to clinical case questions.",
+)
+
 EVIDENCE_QA = TaskDefinition(
     name="evidence-qa",
     pretty_name="Evidence QA",
@@ -42,5 +48,6 @@ ALL_TASKS = {
     MEDICAL_KNOWLEDGE_MCQ.name: MEDICAL_KNOWLEDGE_MCQ,
     MEDICAL_ENTRANCE_MCQ.name: MEDICAL_ENTRANCE_MCQ,
     CLINICAL_CASE_MCQ.name: CLINICAL_CASE_MCQ,
+    CLINICAL_CASE_QA.name: CLINICAL_CASE_QA,
     EVIDENCE_QA.name: EVIDENCE_QA,
 }

@@ -93,6 +93,8 @@ Only native datasets should drive the main public language score.
 
 Entrance-exam datasets are still valuable, but they should live in their own benchmark track rather than be pooled into physician licensing or specialist certification aggregates.
 
+Multilingual parallel resources are useful as comparison anchors, but they should stay in bronze support tracks rather than define the native-first flagship score.
+
 ## Initial roadmap
 
 1. Make Swedish the reference language with migrated SMLB-style datasets.
