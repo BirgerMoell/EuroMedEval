@@ -1,5 +1,7 @@
 """Registered dataset configs."""
 
+from .albanian import ALBANIAN_DATASET_CONFIGS
+from .belgian import BELGIAN_DATASET_CONFIGS
 from .greek import GREEK_DATASET_CONFIGS
 from .french import FRENCH_DATASET_CONFIGS
 from .italian import ITALIAN_DATASET_CONFIGS
@@ -9,6 +11,8 @@ from .swedish import SWEDISH_DATASET_CONFIGS
 from .spanish import SPANISH_DATASET_CONFIGS
 
 ALL_DATASET_CONFIGS = [
+    *ALBANIAN_DATASET_CONFIGS,
+    *BELGIAN_DATASET_CONFIGS,
     *GREEK_DATASET_CONFIGS,
     *NORWEGIAN_DATASET_CONFIGS,
     *SPANISH_DATASET_CONFIGS,

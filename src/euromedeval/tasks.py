@@ -20,6 +20,12 @@ MEDICAL_KNOWLEDGE_MCQ = TaskDefinition(
     description="Multiple-choice questions from licensing, residency, or specialist exams.",
 )
 
+MEDICAL_ENTRANCE_MCQ = TaskDefinition(
+    name="medical-entrance-mcq",
+    pretty_name="Medical Entrance MCQ",
+    description="Multiple-choice questions from physician or medical-school entrance examinations.",
+)
+
 CLINICAL_CASE_MCQ = TaskDefinition(
     name="clinical-case-mcq",
     pretty_name="Clinical Case MCQ",
@@ -34,6 +40,7 @@ EVIDENCE_QA = TaskDefinition(
 
 ALL_TASKS = {
     MEDICAL_KNOWLEDGE_MCQ.name: MEDICAL_KNOWLEDGE_MCQ,
+    MEDICAL_ENTRANCE_MCQ.name: MEDICAL_ENTRANCE_MCQ,
     CLINICAL_CASE_MCQ.name: CLINICAL_CASE_MCQ,
     EVIDENCE_QA.name: EVIDENCE_QA,
 }

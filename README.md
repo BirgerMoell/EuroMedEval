@@ -37,7 +37,7 @@ EuroMedEval is designed to measure model performance in the medical contexts tha
 - a normalized dataset schema
 - a lightweight dataset registry
 - a minimal benchmarker with bootstrap confidence intervals
-- seed dataset configs for Sweden, Greece, Norway, Spain, France, Italy, and Poland
+- seed dataset configs for Albania, Belgium, Sweden, Greece, Norway, Spain, France, Italy, and Poland
 - starter scripts for dataset ingestion
 - contribution and dataset guides
 - a build CLI for reconstructing datasets from local sources or Hugging Face
@@ -91,6 +91,8 @@ EuroMedEval uses three practical dataset tiers:
 
 Only native datasets should drive the main public language score.
 
+Entrance-exam datasets are still valuable, but they should live in their own benchmark track rather than be pooled into physician licensing or specialist certification aggregates.
+
 ## Initial roadmap
 
 1. Make Swedish the reference language with migrated SMLB-style datasets.
@@ -100,6 +102,8 @@ Only native datasets should drive the main public language score.
 
 The scaffold now includes concrete seed entries for:
 
+- Albania
+- Belgium
 - Sweden
 - Greece
 - Norway
@@ -155,6 +159,8 @@ Start here:
 - [New Dataset Guide](/Users/birger/Documents/Papers/EuroMedEval/NEW_DATASET_GUIDE.md)
 - [Methodology](/Users/birger/Documents/Papers/EuroMedEval/docs/methodology.md)
 - [European Seed Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/european_seed_set.md)
+- [Albanian Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/albanian.md)
+- [Belgian Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/belgian.md)
 - [Greek Datasets](/Users/birger/Documents/Papers/EuroMedEval/docs/datasets/greek.md)
 
 ## License

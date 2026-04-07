@@ -41,3 +41,17 @@ def label_from_answer_letter(answer_letter: str, options: tuple[str, ...]) -> st
         if option.startswith(f"{normalized}. "):
             return option
     return None
+
+
+def label_from_one_based_index(answer_index: str, options: tuple[str, ...]) -> str | None:
+    """Resolve a one-based index like `1` or `2` against option texts."""
+    normalized = answer_index.strip()
+    if not normalized:
+        return None
+    try:
+        index = int(normalized)
+    except ValueError:
+        return None
+    if 1 <= index <= len(options):
+        return options[index - 1]
+    return None
