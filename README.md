@@ -136,9 +136,9 @@ python -m euromedeval build-all
 GitHub Pages:
 
 - `docs/index.html` is a static landing page
-- `.github/workflows/pages.yml` deploys the `docs/` directory through GitHub Pages
 - `docs/site.css` and `docs/site.js` contain the site styling and motion
-- enable GitHub Pages with `Build and deployment -> Source -> GitHub Actions`
+- enable GitHub Pages with `Build and deployment -> Source -> Deploy from a branch`
+- set `Branch` to `main` and `/docs`
 
 Preview the site locally:
 
